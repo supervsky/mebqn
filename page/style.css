@@ -137,6 +137,7 @@ header, div.body {
 		position: absolute;
 		top:18px;
 		left:104px;
+		text-decoration:none; /*Safari*/
 	}
     #quick-link p {
     	color:#636262;
@@ -145,6 +146,7 @@ header, div.body {
     	position: absolute;
     	top:41px;
     	left:105px;
+    	text-decoration:none; /*Safari*/
     }
 
 /* div.rightFrame */
@@ -365,6 +367,10 @@ nav ul.pagination li.active a{
 nav ul.pagination span {
 	margin-left:4px;
 	margin-right:4px;
+}
+
+nav ul.patination li img {
+  border:none;
 }
 
 #input-page-num{
