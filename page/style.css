@@ -111,6 +111,10 @@ header, div.body {
     	height:71px;
     	border: solid 1px #e7e7e7;
     	margin-top:12px;
+    	background: -moz-linear-gradient(102deg, #f0f0f0, #fff); /*Firefox*/
+	background: -webkit-linear-gradient(102deg, #f0f0f0, #fff); /*Safari Chrome*/
+	background: -o-linear-gradient(102deg, #f0f0f0, #fff); /*Opera*/
+	background: -ms-linear-gradient(102deg, #f0f0f0, #fff); /*IE10+*/
     }
 
     #quick-link div{
