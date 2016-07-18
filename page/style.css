@@ -370,8 +370,8 @@ nav ul.pagination span {
 	margin-right:4px;
 }
 
-nav ul.patination li img {
-  border:none;
+nav ul.pagination li a img {
+  border:none; /*IE10*/
 }
 
 #input-page-num{
