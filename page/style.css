@@ -130,7 +130,7 @@ header, div.body {
     	top:22px;
     	left:163px;
     }
-      #quick-link a:-webkit-any-link {
+      #quick-link a {
     	text-decoration:none; /*Safari.webkit*/
     }
 	#quick-link h2{
