@@ -2,7 +2,7 @@ body {
 		margin:0;
 		padding:0;
 		background: #fff;
-		font-family:  sans-serif;
+		font-family: "Microsoft Yahei" sans-serif;
 		font-size:12px;
 		color:#666;
 	}
@@ -26,13 +26,13 @@ header, div.body {
 		margin-top:13px;
 		margin-bottom: 11px;
 		margin-left:5px;
+		border:none; /*IE10*/
 	}
 	nav ul {
 		height:39px;
 		margin-top:13px;
 		margin-bottom:11px;
 		float:right;
-		/*background: red;*/
 	}
 	nav ul li {
 		width:84px;
