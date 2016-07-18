@@ -137,7 +137,6 @@ header, div.body {
 		position: absolute;
 		top:18px;
 		left:104px;
-		text-decoration:none; /*Safari*/
 	}
     #quick-link p {
     	color:#636262;
@@ -146,7 +145,10 @@ header, div.body {
     	position: absolute;
     	top:41px;
     	left:105px;
-    	text-decoration:none; /*Safari*/
+    }
+    #quick-link a:-webkit-any-link p, #quick-link a:-webkit-any-link h2 {
+    	text-decoration:none; /*Safari.webkit*/
+    	color:#636262;
     }
 
 /* div.rightFrame */
