@@ -66,7 +66,7 @@ header, div.body {
 
 /* div.leftFrame style */
 	div.leftFrame {
-		margin: 26px 19px;
+		margin: 26px 19px 26px 0;
 		float:left;
 	}
 	div.leftFrame h2 {
