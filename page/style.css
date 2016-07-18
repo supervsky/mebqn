@@ -54,10 +54,10 @@ header, div.body {
 	border: none;
 	width:100%;
 	height:5px;
-    background: -webkit-linear-gradient(#f6f6f6, #fefefe); /* Safari 5.1 - 6.0 
-    background: -o-linear-gradient(#f6f6f6, #fefefe); /* Opera 11.1 - 12.0 
-    background: -moz-linear-gradient(#f6f6f6, #fefefe); /* Firefox 3.6 - 15 
-    background: linear-gradient(#f6f6f6, #fefefe); /* 标准的语法 
+    background: -webkit-linear-gradient(#f6f6f6, #fefefe); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(#f6f6f6, #fefefe); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(#f6f6f6, #fefefe); /* Firefox 3.6 - 15 */
+    background: linear-gradient(#f6f6f6, #fefefe); /* 标准的语法 */
 }
 
  div.body {
