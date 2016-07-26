@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>简单页面性能分析</title>
+	<link rel="stylesheet" href="stylesheets/bootstrap.min.css">
+	<style>
+		img.page-load {
+			width: 70%;
+			height: auto;
+		} 
+	</style>
+</head>
+<body>
+  <div class="container">
+  		<h2 class="page-header">简单页面性能分析</h2>
+  		<h3>导航</h3>
+  		<ul>
+  			<li><a href="#one">第一次请求网页数据</a></li>
+  			<li><a href="#two">第二次请求网页数据</a></li>
+  			<li><a href="#three">第三次请求网页数据</a></li>
+  			<li><a href="#four">第四次请求网页数据</a></li>
+  			<li><a href="#summary">分析和总结</a></li>
+  			<li><a href="#optimiz">性能优化</a></li>
+  		</ul>
+	  	<p>使用Chrome浏览器的开发者工具，默认快捷键 <kbd>F12</kbd> 或 <kbd>Ctrl+Shift+I</kbd>。先清除页面缓存内容，在键盘按下 <kbd>Ctrl+Shift+Del</kbd> 清除图片或文件缓存，得到准确的页面加载的数据。</p>
+	  	<h3 id="one">第一次请求网页数据</h3>
+	  	<img class="page-load" src="images/page_load1.png" title="page load" alt="Chrome显示页面加载的全部数据">
+	  	<hr>
+	  	<h3 id="two"></h3>
+	  	<img class="page-load" src="images/page_load2.png" title="page load" alt="Chrome显示页面加载的全部数据">
+	  	<hr>
+	  	<h3 id="three">第三次请求网页数据</h3>
+	  	<img class="page-load" src="images/page_load3.png" title="page load" alt="Chrome显示页面加载的全部数据">
+	  	<hr>
+	  	<h3 id="three">第四次请求网页数据</h3>
+	  	<img class="page-load" src="images/page_load4.png" title="page load" alt="Chrome显示页面加载的全部数据">
+	  	<hr>
+	  	<h3 id="summary">分析和总结</h3>
+	  	<dl>
+	  		<dt>页面的加载时间包括：</dt>
+	  		<dd>- <a href="https://developer.mozilla.org/en-US/docs/Web/Events/DOMContentLoaded">DOMContentLoaded</a>
+	  		</dd>
+	  		<dd>- <a href="https://developer.mozilla.org/en-US/docs/Web/Events/load">Load</a></dd>
+	  	</dl>
+	  	<p>图中数据显示，<cite> DOMContentLoaded </cite>在时间上相对较一致，而<cite> Load </cite>时间差别很大。</p>
+	  	<p>经过对比，可以得出：文件体积越大，加载的时间越长；文件体积与加载时间并不成正比，例如第二张截图中，前两项的民体积之比接近1/10，但是加载时间之比不到1/3。</p>
+	  	<p>所以，要提高页面的加载速度必须要做到两点</p>
+	  	<ul>
+	  		<li>减小文件体积</li>
+	  		<li>进行小图片合并，减少请求数量</li>
+	  	</ul>
+	  	<hr>
+	  	<h3 id="optimiz">性能优化</h3>
+	  	<ul>
+	  		<li>对加载时间最长的图片<mark>my_name.png</mark>进行处理</li>
+	  		  <ul>
+	  		  	<li>经过查看图片发现，原图片用了白色背景，而非透明色。</li>
+	  		  	<li>用PhotoShop的魔棒工具让白色背景变成透明，然后用CSS把图片透明渲染成白色背景</li>
+	  		  	<li></li>
+	  		  </ul>
+	  		<li>更改图片的格式</li>
+	  		  <ul>
+	  		  	<li>从表格中的数据可以得出加载时间排在第二位和第三位的图片的格式为JPG格式</li>
+	  		  	<li>在性能与图片清晰度的权衡之下，决定修改JPG格式为PNG-8格式来进行有损压缩，以求得更好的性能。</li>
+	  		  </ul>
+	  		<li>对CSS文件和JS文件进行压缩</li>
+	  		  <ul>
+	  		  	<li>去掉空行、注释和优化变量名</li>
+	  		  	<li>合并相关文件减少请求数</li>
+	  		  </ul>
+	  		<li>雪碧图<a href="https://en.wikipedia.org/wiki/Sprite_(computer_graphics)#Sprites_by_CSS">Sprites</a></li>
+	  		  <ul>
+	  		  	<li>请体积很小的图标拼接成一张图</li>
+	  		  	<li>然后利用定位把想要显示的图标显示在目标位置</li>
+	  		  	<li>思想是减少请求数量</li>
+	  		  </ul>
+	  	</ul>
+	  	<footer>
+	  	<hr>
+	  		<p class="text-center">原创文章，转载时请注明 @supervsky。若对本文有任何不同观点及改进，欢迎发送邮件至<a href="mailto:supervsky05@gmail.com"> supervsky05@gmail.com </a>进行讨论</p>
+	  	</footer>
+  </div>
+</body>
+</html>
