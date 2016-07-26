@@ -20,7 +20,7 @@
   			<li><a href="#two">第二次请求网页数据</a></li>
   			<li><a href="#three">第三次请求网页数据</a></li>
   			<li><a href="#four">第四次请求网页数据</a></li>
-  			<li><a href="#summary">分析和总结</a></li>
+  			<li><a href="#summary">分析</a></li>
   			<li><a href="#optimiz">性能优化</a></li>
   		</ul>
 	  	<p>使用Chrome浏览器的开发者工具，默认快捷键 <kbd>F12</kbd> 或 <kbd>Ctrl+Shift+I</kbd>。先清除页面缓存内容，在键盘按下 <kbd>Ctrl+Shift+Del</kbd> 清除图片或文件缓存，得到准确的页面加载的数据。</p>
@@ -36,7 +36,7 @@
 	  	<h3 id="three">第四次请求网页数据</h3>
 	  	<img class="page-load" src="images/page_load4.png" title="page load" alt="Chrome显示页面加载的全部数据">
 	  	<hr>
-	  	<h3 id="summary">分析和总结</h3>
+	  	<h3 id="summary">分析</h3>
 	  	<dl>
 	  		<dt>页面的加载时间包括：</dt>
 	  		<dd>- <a href="https://developer.mozilla.org/en-US/docs/Web/Events/DOMContentLoaded">DOMContentLoaded</a>
@@ -47,8 +47,8 @@
 	  	<p>经过对比，可以得出：文件体积越大，加载的时间越长；文件体积与加载时间并不成正比，例如第二张截图中，前两项的民体积之比接近1/10，但是加载时间之比不到1/3。</p>
 	  	<p>所以，要提高页面的加载速度必须要做到两点</p>
 	  	<ul>
-	  		<li>减小文件体积</li>
-	  		<li>进行小图片合并，减少请求数量</li>
+	  		<li><strong>减小文件体积</strong></li>
+	  		<li><strong>减少请求数量</strong></li>
 	  	</ul>
 	  	<hr>
 	  	<h3 id="optimiz">性能优化</h3>
