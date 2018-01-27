@@ -1,0 +1,9 @@
+.box {text-align:center; }
+.box h2{margin: 0;}
+.gallery-box { margin: 10px auto; border: solid 1px #ccc; }
+.gallery-box img {width: 800px; height: 600px;}
+.box a{border: solid 1px black; display: inline-block; width: 100px; height: 30px; line-height: 30px; text-decoration: none;}
+a:link{ color: black;}
+/*a:visit{color: green;}*/
+a:hover {background-color: #ccc;}
+a:active {color: red;}
