@@ -1,7 +1,7 @@
 (function(){
 	// aImgs存放images的src属性值
 	var aImgs = [];
-	for(var i = 0; i <= 10; i++){
+	for(var i = 0; i < 5; i++){
 		aImgs[i] = "images/pic (" + (i+1) + ").jpg";
 		 // console.log(aImgs[i]);
 	}
