@@ -8,6 +8,8 @@
 	
 	// index [0, len-1]
 	var index = 0, len = aImgs.length;
+
+	// 点击切换按钮
 	$('.btn').on('click', function(){
 		if($(this).data('control') === 'prev'){
 			// alert('上一张');
@@ -19,5 +21,22 @@
 		// console.info(index);
 		document.title = '相册' + (index + 1) + '/' + len;
 		$('.gallery-box img').attr('src', aImgs[index]);
+	});
+
+	//预加载
+	var count = 0;
+	$.each(aImgs, function(i, src){
+		var oImg = new Image();
+		$(oImg).on('load', function(){
+			count++;
+			if( count <= len){
+				console.log(count);
+				$('.progress').html(Math.round(count / len * 100) + '%');
+				document.title = count + '/' + len;
+			} else {
+				$('.loading').hide();
+			}
+		});
+		oImg.src = src;
 	});
 })();
