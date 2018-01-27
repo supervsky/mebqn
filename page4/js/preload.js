@@ -29,13 +29,13 @@
 		var oImg = new Image();
 		$(oImg).on('load', function(){
 			count++;
-			console.log("count: "+count +" len: "+len);
 			$('.progress').html(Math.round(count / len * 100) + '%');
-			document.title = count + '/' + len;
-			oImg.src = src;
-			if( count >= len ){
+			if(count >= len){
 				$('.loading').hide();
+				document.title = '1/'+len;
 			}
 		});
+		oImg.src = src;
 	});
+
 })();
