@@ -12,6 +12,8 @@
 		imgs.push(aImgs[i].src)
 	}
 
+
+
 	// execute
 	$.preload(imgs, {
 		each : function (count) {
@@ -23,7 +25,9 @@
 			});
 		},
 		all :  function () {
-			$('.box').hide();
+			setTimeout(function(){
+				$('.box').hide();
+			}, 500);
 		}
 	});
 })();

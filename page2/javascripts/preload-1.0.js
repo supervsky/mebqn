@@ -1,6 +1,6 @@
 // 图片预加载
 (function($){ 
-
+	// imgs must be a string value or an array consists of strings
 	function Preload(imgs, options){
 		this.imgs = typeof imgs === 'string' ? [ imgs ] : imgs;
 		this.opts = $.extend ({ }, Preload.DEFAULTS, options);
@@ -20,7 +20,7 @@
 		$.each(imgs, function(i, src){
 			if (typeof src != 'string') return;  
 			var oImg = new Image();
-			$(oImg).on('load', function(){
+			$(oImg).on('load error', function(){
 				count++;
 				opts.each && opts.each(count);
 				if(count >= len){
