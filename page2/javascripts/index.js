@@ -27,7 +27,7 @@
 		all :  function () {
 			setTimeout(function(){
 				$('.box').hide();
-			}, 500);
+			}, 1000);
 		}
 	});
 })();
